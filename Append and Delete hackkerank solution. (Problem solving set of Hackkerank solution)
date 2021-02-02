@@ -1,0 +1,24 @@
+string appendAndDelete(string s, string t, int k) {
+int n=s.length();
+int m=t.length();
+if(n+m<k)
+return "Yes";
+int c=0;
+for(int i=0;i<min(n,m);i++)
+{
+if(s[i]==t[i])
+c++;
+else 
+break;
+}
+
+k=k-(n+m)+(2*c);
+if(k<0){
+return "No";
+}
+else if
+(k%2==0){
+return "Yes";
+}
+return "No";
+}
