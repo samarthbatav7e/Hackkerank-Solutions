@@ -1,0 +1,21 @@
+long repeatedString(string s, long long n) {
+long long c=0;
+if(s=="a")
+return n;
+for(int i=0;i<s.size();i++)
+{
+    if(s[i]=='a')
+    c++;
+}
+long long rep=n/s.size();
+c=c*rep;
+for(int i=0;i<n%s.size();i++)
+{
+    if(s[i]=='a')
+    c++;
+  
+}
+ 
+return c;
+
+}
