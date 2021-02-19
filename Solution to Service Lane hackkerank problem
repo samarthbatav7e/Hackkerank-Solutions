@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int minimum(vector<int>& v,int i, int j)
+{
+    int min=v[i];
+    for(int k=i+1;k<=j;k++)
+    {
+        if(v[k]<min)
+        min=v[k];
+    }
+    return min;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int t;
+    cin>>t;
+    vector<int> a(n);
+    for(int k=0;k<n;k++)
+    {
+        cin>>a[k];
+    }
+     int i,j,min;
+    while(t--){
+        cin>>i>>j;
+     cout<< minimum(a,i,j)<<endl;                
+    }  
+        
+    return 0;
+}
